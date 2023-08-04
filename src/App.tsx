@@ -1,3 +1,13 @@
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/themes/default'
+import { GlobalStyle } from './styles/global'
+import { Transactios } from './pages/Transactions'
+
 export default function App() {
-  return <h1>Teste</h1>
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <GlobalStyle />
+      <Transactios />
+    </ThemeProvider>
+  )
 }
